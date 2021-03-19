@@ -130,8 +130,8 @@ p {
 .container__subscription a {
     text-decoration: none;
     text-align: center;
-    color: var(--lightgrey);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--yellow);
     display: block;
     padding: 0.8rem;
     border-radius: 0.3rem;
