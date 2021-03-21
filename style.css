@@ -63,19 +63,28 @@ p {
 
 @media only screen and (min-width: 768px) {
     .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
+        display: flex;
+        flex-direction: column;
+
         max-width: 640px;
         margin: auto;
     }
     .container__community {
-        grid-column: 1 / 3;
+        flex: 1;
+    }
+    .bottom {
+        display: flex;
+    }
+    .container__subscription {
+        flex: 1;
+    }
+    .container__why {
+        flex: 1;
     }
 }
 
 /* -----All Boxes in Container----- */
-.container > section {
+.container section {
     padding: var(--paddingY) var(--paddingX);
 }
 
@@ -173,4 +182,3 @@ footer {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-
