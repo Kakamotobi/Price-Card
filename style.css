@@ -26,9 +26,9 @@ body {
     font-family: "Karla", sans-serif;
     background-color: var(--lightgrey);
     margin: 0;
-    padding: 72px 32.5px;
-    height: 100vh;
+    padding: 72px 32.5px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -57,30 +57,7 @@ p {
 
 /* -----Container----- */
 .container {
-    border-radius: 0.3rem;
-    overflow: hidden;
-}
-
-@media only screen and (min-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-
-        max-width: 640px;
-        margin: auto;
-    }
-    .container__community {
-        flex: 1;
-    }
-    .bottom {
-        display: flex;
-    }
-    .container__subscription {
-        flex: 1;
-    }
-    .container__why {
-        flex: 1;
-    }
+    margin-bottom: 60px;
 }
 
 /* -----All Boxes in Container----- */
@@ -91,6 +68,9 @@ p {
 /* -----Community Box------ */
 .container__community {
     background-color: var(--white);
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    overflow: hidden;
 }
 
 .container__community h2 {
@@ -156,6 +136,9 @@ p {
 .container__why {
     color: var(--lightgrey);
     background-color: var(--lightcyan);
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    overflow: hidden;
 }
 
 .container__why ul {
@@ -173,6 +156,7 @@ p {
 footer {
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 .attribution {
@@ -181,4 +165,33 @@ footer {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* ----------Desktop---------- */
+
+@media only screen and (min-width: 768px) {
+    body {
+        height: 100vh;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 640px;
+        margin: auto;
+    }
+    .container__community {
+        flex: 1;
+    }
+    .bottom {
+        display: flex;
+    }
+    .container__subscription {
+        flex: 1;
+        border-bottom-left-radius: 0.3rem;
+    }
+    .container__why {
+        flex: 1;
+        border-bottom-left-radius: 0;
+    }
 }
